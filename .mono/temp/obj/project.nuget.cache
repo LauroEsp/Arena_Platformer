@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "2P9pwumO48vl+A0erBrFrgx3CJg1XqXkc2EQUxc25KmgZdAh8O1tofkaVmopbDsSJvGgjwCW+WDbiQmOxta9TQ==",
+  "success": true,
+  "projectFilePath": "/home/lauro/Godot/Projects/3_Level_Platformer/3_Level_Platformer.csproj",
+  "expectedPackageFiles": [
+    "/home/lauro/.nuget/packages/microsoft.netframework.referenceassemblies/1.0.0/microsoft.netframework.referenceassemblies.1.0.0.nupkg.sha512",
+    "/home/lauro/.nuget/packages/microsoft.netframework.referenceassemblies.net472/1.0.0/microsoft.netframework.referenceassemblies.net472.1.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

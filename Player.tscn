@@ -1,0 +1,140 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://assets/Character/Character_Sprite_Sheet.png" type="Texture" id=1]
+[ext_resource path="res://Player.cs" type="Script" id=2]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 7.58563
+height = 16.0
+
+[sub_resource type="Animation" id=2]
+resource_name = "attack"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 2,
+"values": [ Rect2( 208, 0, 48, 48 ), Rect2( 288, 0, 48, 48 ), Rect2( 368, 0, 64, 48 ), Rect2( 448, 0, 48, 48 ), Rect2( 528, 0, 48, 48 ), Rect2( 608, 0, 48, 48 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ Rect2( 48, 0, 48, 48 ), Rect2( 128, 0, 48, 48 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ Rect2( 1728, 0, 48, 48 ), Rect2( 1808, 0, 48, 48 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+length = 0.9
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Rect2( 688, 0, 48, 48 ), Rect2( 768, 0, 48, 48 ), Rect2( 848, 0, 48, 48 ), Rect2( 928, 0, 48, 48 ), Rect2( 1008, 0, 48, 48 ), Rect2( 1088, 0, 48, 48 ), Rect2( 1168, 0, 48, 48 ), Rect2( 1248, 0, 48, 48 ), Rect2( 1328, 0, 48, 48 ) ]
+}
+
+[sub_resource type="AnimationNodeAnimation" id=6]
+animation = "attack"
+
+[sub_resource type="AnimationNodeAnimation" id=7]
+animation = "idle"
+
+[sub_resource type="AnimationNodeAnimation" id=8]
+animation = "jump"
+
+[sub_resource type="AnimationNodeAnimation" id=9]
+animation = "run"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=10]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=11]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=12]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=13]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=14]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=15]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=16]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=17]
+
+[sub_resource type="AnimationNodeStateMachine" id=18]
+states/attack/node = SubResource( 6 )
+states/attack/position = Vector2( 176, 170 )
+states/idle/node = SubResource( 7 )
+states/idle/position = Vector2( 507, 139 )
+states/jump/node = SubResource( 8 )
+states/jump/position = Vector2( 388, 49 )
+states/run/node = SubResource( 9 )
+states/run/position = Vector2( 418, 236 )
+transitions = [ "idle", "attack", SubResource( 10 ), "attack", "idle", SubResource( 11 ), "idle", "run", SubResource( 12 ), "run", "idle", SubResource( 13 ), "idle", "jump", SubResource( 14 ), "run", "attack", SubResource( 15 ), "jump", "attack", SubResource( 16 ), "jump", "idle", SubResource( 17 ) ]
+start_node = "idle"
+graph_offset = Vector2( 22.0333, 0 )
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=19]
+
+[node name="Player" type="KinematicBody2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 48, 0, 48, 48 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 8 )
+shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/attack = SubResource( 2 )
+anims/idle = SubResource( 3 )
+anims/jump = SubResource( 4 )
+anims/run = SubResource( 5 )
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource( 18 )
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/playback = SubResource( 19 )

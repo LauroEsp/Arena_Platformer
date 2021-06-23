@@ -1,0 +1,16 @@
+C:/Users/Lauro/Documents/Godot/Projects/3_Level_Platformer/.mono/temp/bin/Debug/3_Level_Platformer.dll
+C:/Users/Lauro/Documents/Godot/Projects/3_Level_Platformer/.mono/temp/bin/Debug/3_Level_Platformer.pdb
+C:/Users/Lauro/Documents/Godot/Projects/3_Level_Platformer/.mono/temp/obj/Debug/3_Level_Platformer.csproj.AssemblyReference.cache
+C:/Users/Lauro/Documents/Godot/Projects/3_Level_Platformer/.mono/temp/obj/Debug/3_Level_Platformer.AssemblyInfoInputs.cache
+C:/Users/Lauro/Documents/Godot/Projects/3_Level_Platformer/.mono/temp/obj/Debug/3_Level_Platformer.AssemblyInfo.cs
+C:/Users/Lauro/Documents/Godot/Projects/3_Level_Platformer/.mono/temp/obj/Debug/3_Level_Platformer.csproj.CoreCompileInputs.cache
+C:/Users/Lauro/Documents/Godot/Projects/3_Level_Platformer/.mono/temp/obj/Debug/3_Level_Platformer.dll
+C:/Users/Lauro/Documents/Godot/Projects/3_Level_Platformer/.mono/temp/obj/Debug/3_Level_Platformer.pdb
+/home/lauro/Godot/Projects/3_Level_Platformer/.mono/temp/bin/Debug/3_Level_Platformer.dll
+/home/lauro/Godot/Projects/3_Level_Platformer/.mono/temp/bin/Debug/3_Level_Platformer.pdb
+/home/lauro/Godot/Projects/3_Level_Platformer/.mono/temp/obj/Debug/3_Level_Platformer.csproj.AssemblyReference.cache
+/home/lauro/Godot/Projects/3_Level_Platformer/.mono/temp/obj/Debug/3_Level_Platformer.AssemblyInfoInputs.cache
+/home/lauro/Godot/Projects/3_Level_Platformer/.mono/temp/obj/Debug/3_Level_Platformer.AssemblyInfo.cs
+/home/lauro/Godot/Projects/3_Level_Platformer/.mono/temp/obj/Debug/3_Level_Platformer.csproj.CoreCompileInputs.cache
+/home/lauro/Godot/Projects/3_Level_Platformer/.mono/temp/obj/Debug/3_Level_Platformer.dll
+/home/lauro/Godot/Projects/3_Level_Platformer/.mono/temp/obj/Debug/3_Level_Platformer.pdb
